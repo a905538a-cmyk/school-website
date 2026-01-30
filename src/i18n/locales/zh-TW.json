@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於本校",
+    "departments": "院系介紹",
+    "admissions": "招生資訊",
+    "news": "最新消息",
+    "campus": "校園生活",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "welcome": "歡迎來到未來大學",
+    "subtitle": "培育卓越人才，創造美好未來",
+    "explore": "探索更多",
+    "apply": "立即申請"
+  },
+  "news": {
+    "title": "最新消息",
+    "more": "查看更多",
+    "spotlight": "焦點新聞",
+    "announcements": "校園公告",
+    "events": "活動快報"
+  },
+  "quickLinks": {
+    "title": "快速連結",
+    "studentPortal": "學生入口",
+    "facultyPortal": "教職員入口",
+    "library": "圖書館",
+    "calendar": "校園行事曆",
+    "courses": "課程查詢",
+    "email": "校務信箱"
+  },
+  "campus": {
+    "title": "校園生活",
+    "learning": "學習資源",
+    "learningDesc": "校內課程、開放式課程等各項資源",
+    "living": "生活資訊",
+    "livingDesc": "師生住宿、交通、生活便利通等資訊",
+    "network": "網路服務",
+    "networkDesc": "校園網路、帳號申請等相關服務"
+  },
+  "stats": {
+    "students": "在校學生",
+    "faculty": "專任教師",
+    "departments": "科系數量",
+    "years": "創校年數"
+  },
+  "footer": {
+    "address": "地址",
+    "phone": "電話",
+    "email": "電子郵件",
+    "followUs": "關注我們",
+    "quickLinks": "快速連結",
+    "resources": "資源連結",
+    "copyright": "版權所有"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "readMore": "閱讀更多",
+    "viewAll": "查看全部"
+  }
+}

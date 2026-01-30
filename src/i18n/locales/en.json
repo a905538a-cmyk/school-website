@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "departments": "Departments",
+    "admissions": "Admissions",
+    "news": "News",
+    "campus": "Campus Life",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Welcome to Future University",
+    "subtitle": "Nurturing Excellence, Creating Tomorrow",
+    "explore": "Explore More",
+    "apply": "Apply Now"
+  },
+  "news": {
+    "title": "Latest News",
+    "more": "View More",
+    "spotlight": "Spotlight",
+    "announcements": "Announcements",
+    "events": "Events"
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "studentPortal": "Student Portal",
+    "facultyPortal": "Faculty Portal",
+    "library": "Library",
+    "calendar": "Academic Calendar",
+    "courses": "Course Catalog",
+    "email": "Campus Email"
+  },
+  "campus": {
+    "title": "Campus Life",
+    "learning": "Learning Resources",
+    "learningDesc": "Courses, open courseware, and various resources",
+    "living": "Living Information",
+    "livingDesc": "Housing, transportation, and daily life info",
+    "network": "Network Services",
+    "networkDesc": "Campus network and account services"
+  },
+  "stats": {
+    "students": "Students",
+    "faculty": "Faculty Members",
+    "departments": "Departments",
+    "years": "Years of History"
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "copyright": "All Rights Reserved"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All"
+  }
+}

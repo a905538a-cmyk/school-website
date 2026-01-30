@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "departments": "Khoa",
+    "admissions": "Tuyển sinh",
+    "news": "Tin tức",
+    "campus": "Đời sống",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "welcome": "Chào mừng đến Đại học Tương lai",
+    "subtitle": "Nuôi dưỡng sự xuất sắc, Kiến tạo tương lai",
+    "explore": "Khám phá thêm",
+    "apply": "Đăng ký ngay"
+  },
+  "news": {
+    "title": "Tin tức mới nhất",
+    "more": "Xem thêm",
+    "spotlight": "Tiêu điểm",
+    "announcements": "Thông báo",
+    "events": "Sự kiện"
+  },
+  "quickLinks": {
+    "title": "Liên kết nhanh",
+    "studentPortal": "Cổng sinh viên",
+    "facultyPortal": "Cổng giảng viên",
+    "library": "Thư viện",
+    "calendar": "Lịch học",
+    "courses": "Danh mục khóa học",
+    "email": "Email trường"
+  },
+  "campus": {
+    "title": "Đời sống sinh viên",
+    "learning": "Tài nguyên học tập",
+    "learningDesc": "Khóa học, tài liệu mở và các nguồn lực",
+    "living": "Thông tin sinh hoạt",
+    "livingDesc": "Ký túc xá, giao thông và đời sống",
+    "network": "Dịch vụ mạng",
+    "networkDesc": "Mạng và dịch vụ tài khoản"
+  },
+  "stats": {
+    "students": "Sinh viên",
+    "faculty": "Giảng viên",
+    "departments": "Khoa",
+    "years": "Năm lịch sử"
+  },
+  "footer": {
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "followUs": "Theo dõi",
+    "quickLinks": "Liên kết nhanh",
+    "resources": "Tài nguyên",
+    "copyright": "Bản quyền"
+  },
+  "common": {
+    "learnMore": "Tìm hiểu thêm",
+    "readMore": "Đọc thêm",
+    "viewAll": "Xem tất cả"
+  }
+}
