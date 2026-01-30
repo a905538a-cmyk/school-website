@@ -1,215 +1,122 @@
 <script setup>
 import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const form = ref({
   name: '',
   email: '',
+  phone: '',
   subject: '',
   message: ''
 })
 
 const handleSubmit = () => {
-  // 這裡會接 Laravel API
-  console.log('Form submitted:', form.value)
   alert('感謝您的訊息，我們會盡快回覆！')
 }
 </script>
 
 <template>
-  <div class="page contact-page">
-    <div class="page-hero">
-      <div class="container">
-        <h1>{{ t('nav.contact') }}</h1>
-        <p>有任何問題歡迎與我們聯繫</p>
+  <div class="contact-page">
+    <div class="page-header">
+      <div class="container position-relative">
+        <h1>聯絡我們</h1>
+        <p class="mb-0">有任何問題歡迎與我們聯繫</p>
       </div>
     </div>
     
-    <div class="page-content">
+    <section class="py-5">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h2>聯絡資訊</h2>
+        <div class="row g-5">
+          <!-- Contact Info -->
+          <div class="col-lg-4">
+            <h4 class="fw-bold mb-4">聯絡資訊</h4>
             
-            <div class="info-item">
-              <span class="info-icon">📍</span>
+            <div class="d-flex mb-4">
+              <div class="flex-shrink-0 me-3 fs-4">📍</div>
               <div>
-                <h4>{{ t('footer.address') }}</h4>
-                <p>台北市大安區未來路一號</p>
+                <h6 class="fw-bold mb-1">地址</h6>
+                <p class="text-muted mb-0">115311 台北市南港區研究院路三段245號</p>
               </div>
             </div>
             
-            <div class="info-item">
-              <span class="info-icon">📞</span>
+            <div class="d-flex mb-4">
+              <div class="flex-shrink-0 me-3 fs-4">📞</div>
               <div>
-                <h4>{{ t('footer.phone') }}</h4>
-                <p>(02) 1234-5678</p>
+                <h6 class="fw-bold mb-1">電話</h6>
+                <p class="text-muted mb-0">(02) 2782-1862</p>
               </div>
             </div>
             
-            <div class="info-item">
-              <span class="info-icon">📧</span>
+            <div class="d-flex mb-4">
+              <div class="flex-shrink-0 me-3 fs-4">📧</div>
               <div>
-                <h4>{{ t('footer.email') }}</h4>
-                <p>info@future.edu.tw</p>
+                <h6 class="fw-bold mb-1">電子郵件</h6>
+                <p class="text-muted mb-0">service@cust.edu.tw</p>
               </div>
             </div>
             
-            <div class="info-item">
-              <span class="info-icon">🕒</span>
+            <div class="d-flex mb-4">
+              <div class="flex-shrink-0 me-3 fs-4">🕒</div>
               <div>
-                <h4>辦公時間</h4>
-                <p>週一至週五 08:00 - 17:00</p>
+                <h6 class="fw-bold mb-1">辦公時間</h6>
+                <p class="text-muted mb-0">週一至週五 08:00 - 17:00</p>
               </div>
             </div>
           </div>
           
-          <div class="contact-form">
-            <h2>聯絡表單</h2>
-            <form @submit.prevent="handleSubmit">
-              <div class="form-group">
-                <label for="name">姓名</label>
-                <input type="text" id="name" v-model="form.name" required>
+          <!-- Contact Form -->
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-4">聯絡表單</h4>
+                <form @submit.prevent="handleSubmit">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">姓名 *</label>
+                      <input type="text" class="form-control" v-model="form.name" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">電話</label>
+                      <input type="tel" class="form-control" v-model="form.phone">
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">電子郵件 *</label>
+                      <input type="email" class="form-control" v-model="form.email" required>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">主旨 *</label>
+                      <input type="text" class="form-control" v-model="form.subject" required>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">訊息內容 *</label>
+                      <textarea class="form-control" rows="5" v-model="form.message" required></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary btn-lg w-100">
+                        送出訊息
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              
-              <div class="form-group">
-                <label for="email">電子郵件</label>
-                <input type="email" id="email" v-model="form.email" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="subject">主旨</label>
-                <input type="text" id="subject" v-model="form.subject" required>
-              </div>
-              
-              <div class="form-group">
-                <label for="message">訊息內容</label>
-                <textarea id="message" v-model="form.message" rows="5" required></textarea>
-              </div>
-              
-              <button type="submit" class="submit-btn">送出訊息</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    
+    <!-- Map -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h4 class="fw-bold text-center mb-4">交通位置</h4>
+        <div class="ratio ratio-21x9 rounded-3 overflow-hidden shadow">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.178!2d121.612!3d25.045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzQyLjAiTiAxMjHCsDM2JzQzLjIiRQ!5e0!3m2!1szh-TW!2stw!4v1234567890"
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
-
-<style scoped>
-.page {
-  padding-top: 80px;
-}
-
-.page-hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-hero p {
-  opacity: 0.9;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.page-content {
-  padding: 4rem 0;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-}
-
-.contact-info h2,
-.contact-form h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: var(--color-primary);
-}
-
-.info-item {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.info-icon {
-  font-size: 1.5rem;
-}
-
-.info-item h4 {
-  margin-bottom: 0.25rem;
-  color: var(--color-text);
-}
-
-.info-item p {
-  color: var(--color-text-muted);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-light);
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 1rem;
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.submit-btn:hover {
-  background: var(--color-secondary);
-}
-
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-}
-</style>

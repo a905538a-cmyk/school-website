@@ -1,133 +1,54 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+import { ref, onMounted } from 'vue'
 
 const quickLinks = [
-  { key: 'studentPortal', icon: '👨‍🎓', color: '#3498db' },
-  { key: 'facultyPortal', icon: '👨‍🏫', color: '#2ecc71' },
-  { key: 'library', icon: '📚', color: '#9b59b6' },
-  { key: 'calendar', icon: '📅', color: '#e74c3c' },
-  { key: 'courses', icon: '📝', color: '#f39c12' },
-  { key: 'email', icon: '📧', color: '#1abc9c' }
+  { name: '學生入口', icon: '👨‍🎓', path: '#' },
+  { name: '教職員入口', icon: '👨‍🏫', path: '#' },
+  { name: '圖書館', icon: '📚', path: '#' },
+  { name: '選課系統', icon: '📝', path: '#' },
+  { name: '校務信箱', icon: '📧', path: '#' },
+  { name: '行事曆', icon: '📅', path: '#' }
 ]
+
+// 3D Tilt Effect
+const handleMouseMove = (e, el) => {
+  const rect = el.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  const centerX = rect.width / 2
+  const centerY = rect.height / 2
+  const rotateX = (y - centerY) / 10
+  const rotateY = (centerX - x) / 10
+  
+  el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`
+}
+
+const handleMouseLeave = (el) => {
+  el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)'
+}
 </script>
 
 <template>
-  <section class="quick-links-section">
+  <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">{{ t('quickLinks.title') }}</h2>
-      
-      <div class="links-grid">
-        <a 
+      <h2 class="text-center mb-5 fw-bold">快速連結</h2>
+      <div class="row g-4">
+        <div 
           v-for="link in quickLinks" 
-          :key="link.key"
-          href="#"
-          class="link-card"
+          :key="link.name"
+          class="col-6 col-md-4 col-lg-2"
         >
-          <div class="link-icon" :style="{ background: `${link.color}15`, color: link.color }">
-            {{ link.icon }}
-          </div>
-          <span class="link-name">{{ t(`quickLinks.${link.key}`) }}</span>
-        </a>
+          <a 
+            :href="link.path"
+            class="quick-link d-block text-center text-decoration-none"
+            @mousemove="(e) => handleMouseMove(e, $event.currentTarget)"
+            @mouseleave="handleMouseLeave($event.currentTarget)"
+          >
+            <div class="quick-link-icon">{{ link.icon }}</div>
+            <span class="fw-medium text-dark">{{ link.name }}</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.quick-links-section {
-  padding: 4rem 0;
-  background: white;
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--color-text);
-}
-
-.links-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem;
-}
-
-.link-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem 1rem;
-  background: var(--color-bg-secondary);
-  border-radius: 16px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.link-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.link-icon {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.75rem;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-}
-
-.link-card:hover .link-icon {
-  transform: scale(1.1);
-}
-
-.link-name {
-  font-weight: 500;
-  color: var(--color-text);
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .links-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .quick-links-section {
-    padding: 3rem 0;
-  }
-  
-  .container {
-    padding: 0 1rem;
-  }
-  
-  .links-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .link-card {
-    padding: 1.5rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-}
-</style>

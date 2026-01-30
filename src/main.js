@@ -2,6 +2,12 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
+
+// Bootstrap 5
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+// Custom Styles
 import './style.css'
 
 const app = createApp(App)
