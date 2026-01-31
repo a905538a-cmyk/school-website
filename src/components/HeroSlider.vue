@@ -1,25 +1,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const slides = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80',
-    title: '歡迎來到中華科技大學',
-    subtitle: '培育專業人才・創造美好未來'
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80',
-    title: '114 學年度招生中',
-    subtitle: '加入中華・開啟無限可能'
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80',
-    title: '國際化學習環境',
-    subtitle: '與世界接軌・拓展全球視野'
-  }
+  { id: 1, image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80', titleKey: 'hero.welcome', subtitleKey: 'hero.subtitle' },
+  { id: 2, image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80', titleKey: 'hero.slide2Title', subtitleKey: 'hero.slide2Subtitle' },
+  { id: 3, image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80', titleKey: 'hero.slide3Title', subtitleKey: 'hero.slide3Subtitle' }
 ]
 
 const currentSlide = ref(0)
@@ -44,7 +32,6 @@ onUnmounted(() => {
 
 <template>
   <section class="hero-section">
-    <!-- Carousel -->
     <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
       <div class="carousel-inner h-100">
         <div 
@@ -53,32 +40,23 @@ onUnmounted(() => {
           class="carousel-item h-100"
           :class="{ active: index === 0 }"
         >
-          <div 
-            class="hero-slide" 
-            :style="{ backgroundImage: `url(${slide.image})` }"
-          >
+          <div class="hero-slide" :style="{ backgroundImage: `url(${slide.image})` }">
             <div class="hero-overlay"></div>
           </div>
         </div>
       </div>
 
-      <!-- Custom Content Overlay -->
       <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
         <div class="hero-content text-center px-3">
-          <h1 class="hero-title mb-3">{{ slides[currentSlide].title }}</h1>
-          <p class="hero-subtitle mb-4">{{ slides[currentSlide].subtitle }}</p>
+          <h1 class="hero-title mb-3">{{ t(slides[currentSlide].titleKey) }}</h1>
+          <p class="hero-subtitle mb-4">{{ t(slides[currentSlide].subtitleKey) }}</p>
           <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="/admissions" class="btn hero-btn hero-btn-primary">
-              立即報名
-            </a>
-            <a href="/about" class="btn hero-btn hero-btn-outline">
-              認識中華
-            </a>
+            <a href="/admissions" class="btn hero-btn hero-btn-primary">{{ t('hero.apply') }}</a>
+            <a href="/about" class="btn hero-btn hero-btn-outline">{{ t('hero.explore') }}</a>
           </div>
         </div>
       </div>
 
-      <!-- Indicators -->
       <div class="carousel-indicators">
         <button 
           v-for="(slide, index) in slides" 
@@ -90,7 +68,6 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
     <div class="scroll-indicator">
       <small class="d-block mb-2">SCROLL</small>
       <i class="bi bi-chevron-down"></i>

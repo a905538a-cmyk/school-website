@@ -1,11 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const stats = [
-  { label: '在校學生', value: 8000, suffix: '+' },
-  { label: '專任教師', value: 350, suffix: '+' },
-  { label: '科系數量', value: 25, suffix: '' },
-  { label: '創校年數', value: 57, suffix: '年' }
+  { key: 'students', value: 8000, suffix: '+' },
+  { key: 'faculty', value: 350, suffix: '+' },
+  { key: 'departments', value: 25, suffix: '' },
+  { key: 'years', value: 57, suffix: '' }
 ]
 
 const animatedValues = ref(stats.map(() => 0))
@@ -50,16 +53,10 @@ onMounted(() => {
   <section class="stats-section py-5">
     <div class="container position-relative">
       <div class="row g-4">
-        <div 
-          v-for="(stat, index) in stats" 
-          :key="stat.label"
-          class="col-6 col-md-3"
-        >
+        <div v-for="(stat, index) in stats" :key="stat.key" class="col-6 col-md-3">
           <div class="stat-item">
-            <span class="stat-number">
-              {{ animatedValues[index].toLocaleString() }}{{ stat.suffix }}
-            </span>
-            <span class="stat-label">{{ stat.label }}</span>
+            <span class="stat-number">{{ animatedValues[index].toLocaleString() }}{{ stat.suffix }}</span>
+            <span class="stat-label">{{ t(`stats.${stat.key}`) }}</span>
           </div>
         </div>
       </div>

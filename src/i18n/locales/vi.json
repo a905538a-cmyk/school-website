@@ -1,43 +1,45 @@
 {
   "nav": {
     "home": "Trang chủ",
-    "about": "Về chúng tôi",
-    "departments": "Khoa",
+    "about": "Về CUST",
+    "academic": "Đơn vị học thuật",
+    "admin": "Hành chính",
     "admissions": "Tuyển sinh",
     "news": "Tin tức",
-    "campus": "Đời sống",
     "contact": "Liên hệ"
   },
-  "hero": {
-    "welcome": "Chào mừng đến Đại học Tương lai",
-    "subtitle": "Nuôi dưỡng sự xuất sắc, Kiến tạo tương lai",
-    "explore": "Khám phá thêm",
-    "apply": "Đăng ký ngay"
+  "academicUnits": {
+    "engineering": "Khoa Kỹ thuật",
+    "management": "Khoa Quản lý",
+    "humanities": "Khoa Nhân văn",
+    "general": "Trung tâm Giáo dục đại cương"
   },
-  "news": {
-    "title": "Tin tức mới nhất",
-    "more": "Xem thêm",
-    "spotlight": "Tiêu điểm",
-    "announcements": "Thông báo",
-    "events": "Sự kiện"
+  "adminUnits": {
+    "academicAffairs": "Phòng Đào tạo",
+    "studentAffairs": "Phòng Công tác sinh viên",
+    "generalAffairs": "Phòng Hành chính",
+    "research": "Phòng Nghiên cứu",
+    "library": "Thư viện",
+    "itCenter": "Trung tâm CNTT"
+  },
+  "hero": {
+    "welcome": "Chào mừng đến CUST",
+    "subtitle": "Đào tạo chuyên gia, Kiến tạo tương lai",
+    "apply": "Đăng ký ngay",
+    "explore": "Khám phá CUST",
+    "slide2Title": "Tuyển sinh 2026",
+    "slide2Subtitle": "Gia nhập CUST, Mở khóa tiềm năng",
+    "slide3Title": "Môi trường quốc tế",
+    "slide3Subtitle": "Kết nối thế giới, Mở rộng tầm nhìn"
   },
   "quickLinks": {
     "title": "Liên kết nhanh",
     "studentPortal": "Cổng sinh viên",
     "facultyPortal": "Cổng giảng viên",
     "library": "Thư viện",
-    "calendar": "Lịch học",
-    "courses": "Danh mục khóa học",
-    "email": "Email trường"
-  },
-  "campus": {
-    "title": "Đời sống sinh viên",
-    "learning": "Tài nguyên học tập",
-    "learningDesc": "Khóa học, tài liệu mở và các nguồn lực",
-    "living": "Thông tin sinh hoạt",
-    "livingDesc": "Ký túc xá, giao thông và đời sống",
-    "network": "Dịch vụ mạng",
-    "networkDesc": "Mạng và dịch vụ tài khoản"
+    "courses": "Hệ thống khóa học",
+    "email": "Email trường",
+    "calendar": "Lịch"
   },
   "stats": {
     "students": "Sinh viên",
@@ -45,18 +47,70 @@
     "departments": "Khoa",
     "years": "Năm lịch sử"
   },
-  "footer": {
+  "features": {
+    "title": "Tại sao chọn CUST?",
+    "teaching": "Giảng dạy chất lượng",
+    "teachingDesc": "Chuyên gia ngành, giáo dục thực hành",
+    "industry": "Hợp tác doanh nghiệp",
+    "industryDesc": "Liên kết chặt chẽ với doanh nghiệp",
+    "international": "Giao lưu quốc tế",
+    "internationalDesc": "Trường đối tác toàn cầu",
+    "career": "Hỗ trợ nghề nghiệp",
+    "careerDesc": "Tỷ lệ việc làm cao, mạng lưới cựu sinh viên rộng"
+  },
+  "news": {
+    "title": "Tin tức mới nhất",
+    "more": "Xem thêm",
+    "readMore": "Đọc thêm",
+    "categories": {
+      "all": "Tất cả",
+      "admission": "Tuyển sinh",
+      "honor": "Vinh danh",
+      "activity": "Hoạt động",
+      "international": "Quốc tế",
+      "announcement": "Thông báo"
+    }
+  },
+  "about": {
+    "title": "Về CUST",
+    "subtitle": "Khám phá lịch sử, tầm nhìn và sứ mệnh",
+    "intro": "Giới thiệu",
+    "introText1": "Đại học Khoa học và Công nghệ Trung Hoa được thành lập năm 1968. Sau nhiều thập kỷ phát triển, đã trở thành một trường đại học có truyền thống xuất sắc.",
+    "introText2": "Với phương châm 'Thành thật, Thận trọng, Siêng năng, Giản dị', chúng tôi cam kết đào tạo nhân tài xuất sắc với kiến thức và kỹ năng chuyên môn.",
+    "visionTitle": "Tầm nhìn & Sứ mệnh",
+    "vision": "Tầm nhìn",
+    "visionText": "Trở thành trường đại học khoa học ứng dụng có ảnh hưởng nhất Châu Á - Thái Bình Dương",
+    "mission": "Sứ mệnh",
+    "missionText": "Đào tạo nhân tài xuất sắc với kỹ năng chuyên môn và tư duy sáng tạo",
+    "values": "Giá trị",
+    "valuesText": "Liêm chính, Thận trọng, Siêng năng, Giản dị"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Hãy liên hệ nếu bạn có bất kỳ câu hỏi nào",
+    "info": "Thông tin liên hệ",
     "address": "Địa chỉ",
+    "addressText": "Số 245, Đoạn 3, Đường Academia, Quận Nangang, Đài Bắc 115311",
     "phone": "Điện thoại",
     "email": "Email",
-    "followUs": "Theo dõi",
+    "hours": "Giờ làm việc",
+    "hoursText": "Thứ Hai - Thứ Sáu 08:00 - 17:00",
+    "form": "Biểu mẫu liên hệ",
+    "name": "Họ tên",
+    "subject": "Tiêu đề",
+    "message": "Nội dung",
+    "submit": "Gửi tin nhắn",
+    "location": "Vị trí"
+  },
+  "footer": {
     "quickLinks": "Liên kết nhanh",
     "resources": "Tài nguyên",
+    "followUs": "Theo dõi chúng tôi",
+    "followText": "Đăng ký theo dõi mạng xã hội để nhận tin tức mới nhất!",
     "copyright": "Bản quyền"
   },
   "common": {
-    "learnMore": "Tìm hiểu thêm",
-    "readMore": "Đọc thêm",
-    "viewAll": "Xem tất cả"
+    "viewMore": "Xem thêm",
+    "learnMore": "Tìm hiểu thêm"
   }
 }

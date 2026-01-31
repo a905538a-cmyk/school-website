@@ -1,43 +1,45 @@
 {
   "nav": {
     "home": "首頁",
-    "about": "關於本校",
-    "departments": "院系介紹",
+    "about": "關於中華",
+    "academic": "學術單位",
+    "admin": "行政單位",
     "admissions": "招生資訊",
     "news": "最新消息",
-    "campus": "校園生活",
     "contact": "聯絡我們"
   },
-  "hero": {
-    "welcome": "歡迎來到未來大學",
-    "subtitle": "培育卓越人才，創造美好未來",
-    "explore": "探索更多",
-    "apply": "立即申請"
+  "academicUnits": {
+    "engineering": "工學院",
+    "management": "管理學院",
+    "humanities": "人文社會學院",
+    "general": "通識教育中心"
   },
-  "news": {
-    "title": "最新消息",
-    "more": "查看更多",
-    "spotlight": "焦點新聞",
-    "announcements": "校園公告",
-    "events": "活動快報"
+  "adminUnits": {
+    "academicAffairs": "教務處",
+    "studentAffairs": "學務處",
+    "generalAffairs": "總務處",
+    "research": "研發處",
+    "library": "圖書館",
+    "itCenter": "資訊中心"
+  },
+  "hero": {
+    "welcome": "歡迎來到中華科技大學",
+    "subtitle": "培育專業人才・創造美好未來",
+    "apply": "立即報名",
+    "explore": "認識中華",
+    "slide2Title": "114 學年度招生中",
+    "slide2Subtitle": "加入中華・開啟無限可能",
+    "slide3Title": "國際化學習環境",
+    "slide3Subtitle": "與世界接軌・拓展全球視野"
   },
   "quickLinks": {
     "title": "快速連結",
     "studentPortal": "學生入口",
     "facultyPortal": "教職員入口",
     "library": "圖書館",
-    "calendar": "校園行事曆",
-    "courses": "課程查詢",
-    "email": "校務信箱"
-  },
-  "campus": {
-    "title": "校園生活",
-    "learning": "學習資源",
-    "learningDesc": "校內課程、開放式課程等各項資源",
-    "living": "生活資訊",
-    "livingDesc": "師生住宿、交通、生活便利通等資訊",
-    "network": "網路服務",
-    "networkDesc": "校園網路、帳號申請等相關服務"
+    "courses": "選課系統",
+    "email": "校務信箱",
+    "calendar": "行事曆"
   },
   "stats": {
     "students": "在校學生",
@@ -45,18 +47,70 @@
     "departments": "科系數量",
     "years": "創校年數"
   },
-  "footer": {
+  "features": {
+    "title": "為什麼選擇中華？",
+    "teaching": "優質教學",
+    "teachingDesc": "業界師資・實務教學・培育專業人才",
+    "industry": "產學合作",
+    "industryDesc": "與企業緊密合作・提供實習機會",
+    "international": "國際交流",
+    "internationalDesc": "姊妹校遍佈全球・拓展國際視野",
+    "career": "就業保障",
+    "careerDesc": "高就業率・校友網絡遍佈各產業"
+  },
+  "news": {
+    "title": "最新消息",
+    "more": "查看更多",
+    "readMore": "閱讀更多",
+    "categories": {
+      "all": "全部",
+      "admission": "招生資訊",
+      "honor": "榮譽榜",
+      "activity": "校園活動",
+      "international": "國際交流",
+      "announcement": "行政公告"
+    }
+  },
+  "about": {
+    "title": "關於中華",
+    "subtitle": "認識中華科技大學的歷史、願景與使命",
+    "intro": "學校簡介",
+    "introText1": "中華科技大學創立於1968年，前身為中華工業專科學校，歷經多年發展，已成為一所具有優良傳統的科技大學。",
+    "introText2": "本校以「誠、慎、勤、樸」為校訓，致力於培育具備專業知識與技能的優秀人才。我們強調理論與實務並重，透過產學合作與實習機會，讓學生在畢業前就能累積豐富的實務經驗。",
+    "visionTitle": "願景與使命",
+    "vision": "願景",
+    "visionText": "成為亞太地區最具影響力的應用科技大學",
+    "mission": "使命",
+    "missionText": "培育具備專業技能與創新思維的優秀人才",
+    "values": "價值",
+    "valuesText": "誠信、謹慎、勤勉、樸實"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "subtitle": "有任何問題歡迎與我們聯繫",
+    "info": "聯絡資訊",
     "address": "地址",
+    "addressText": "115311 台北市南港區研究院路三段245號",
     "phone": "電話",
     "email": "電子郵件",
-    "followUs": "關注我們",
+    "hours": "辦公時間",
+    "hoursText": "週一至週五 08:00 - 17:00",
+    "form": "聯絡表單",
+    "name": "姓名",
+    "subject": "主旨",
+    "message": "訊息內容",
+    "submit": "送出訊息",
+    "location": "交通位置"
+  },
+  "footer": {
     "quickLinks": "快速連結",
-    "resources": "資源連結",
+    "resources": "校內資源",
+    "followUs": "關注我們",
+    "followText": "訂閱我們的社群媒體，獲取最新校園消息！",
     "copyright": "版權所有"
   },
   "common": {
-    "learnMore": "了解更多",
-    "readMore": "閱讀更多",
-    "viewAll": "查看全部"
+    "viewMore": "查看更多",
+    "learnMore": "了解更多"
   }
 }

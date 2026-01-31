@@ -1,18 +1,21 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const quickLinks = [
-  { name: '首頁', path: '/' },
-  { name: '關於中華', path: '/about' },
-  { name: '學術單位', path: '/academic' },
-  { name: '招生資訊', path: '/admissions' }
+  { key: 'home', path: '/' },
+  { key: 'about', path: '/about' },
+  { key: 'academic', path: '/academic' },
+  { key: 'admissions', path: '/admissions' }
 ]
 
 const resources = [
-  { name: '學生入口', path: '#' },
-  { name: '教職員入口', path: '#' },
-  { name: '圖書館', path: '#' },
-  { name: '選課系統', path: '#' }
+  { key: 'studentPortal', path: '#' },
+  { key: 'facultyPortal', path: '#' },
+  { key: 'library', path: '#' },
+  { key: 'courses', path: '#' }
 ]
 </script>
 
@@ -30,55 +33,53 @@ const resources = [
             </div>
           </div>
           <p class="small mb-2">
-            <strong>📍 地址：</strong><br>
-            115311 台北市南港區研究院路三段245號
+            <strong>📍 {{ t('contact.address') }}：</strong><br>
+            {{ t('contact.addressText') }}
           </p>
           <p class="small mb-2">
-            <strong>📞 電話：</strong>(02) 2782-1862
+            <strong>📞 {{ t('contact.phone') }}：</strong>(02) 2782-1862
           </p>
           <p class="small mb-0">
-            <strong>📧 信箱：</strong>service@cust.edu.tw
+            <strong>📧 {{ t('contact.email') }}：</strong>service@cust.edu.tw
           </p>
         </div>
 
         <!-- Quick Links -->
         <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">快速連結</h6>
+          <h6 class="text-white fw-bold mb-3">{{ t('footer.quickLinks') }}</h6>
           <ul class="list-unstyled">
             <li v-for="link in quickLinks" :key="link.path" class="mb-2">
-              <RouterLink :to="link.path">{{ link.name }}</RouterLink>
+              <RouterLink :to="link.path">{{ t(`nav.${link.key}`) }}</RouterLink>
             </li>
           </ul>
         </div>
 
         <!-- Resources -->
         <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">校內資源</h6>
+          <h6 class="text-white fw-bold mb-3">{{ t('footer.resources') }}</h6>
           <ul class="list-unstyled">
-            <li v-for="link in resources" :key="link.name" class="mb-2">
-              <a :href="link.path">{{ link.name }}</a>
+            <li v-for="link in resources" :key="link.key" class="mb-2">
+              <a :href="link.path">{{ t(`quickLinks.${link.key}`) }}</a>
             </li>
           </ul>
         </div>
 
         <!-- Social -->
         <div class="col-lg-4">
-          <h6 class="text-white fw-bold mb-3">關注我們</h6>
+          <h6 class="text-white fw-bold mb-3">{{ t('footer.followUs') }}</h6>
           <div class="mb-3">
             <a href="#" class="social-link">📘</a>
             <a href="#" class="social-link">📷</a>
             <a href="#" class="social-link">📺</a>
           </div>
-          <p class="small text-white-50">
-            訂閱我們的社群媒體，獲取最新校園消息！
-          </p>
+          <p class="small text-white-50">{{ t('footer.followText') }}</p>
         </div>
       </div>
 
       <hr class="my-4 border-secondary">
 
       <div class="text-center small text-white-50">
-        <p class="mb-0">© {{ new Date().getFullYear() }} 中華科技大學 China University of Science and Technology. All Rights Reserved.</p>
+        <p class="mb-0">© {{ new Date().getFullYear() }} 中華科技大學 China University of Science and Technology. {{ t('footer.copyright') }}.</p>
       </div>
     </div>
   </footer>

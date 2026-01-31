@@ -1,62 +1,116 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Us",
-    "departments": "Departments",
+    "about": "About CUST",
+    "academic": "Academic Units",
+    "admin": "Administration",
     "admissions": "Admissions",
     "news": "News",
-    "campus": "Campus Life",
     "contact": "Contact"
   },
-  "hero": {
-    "welcome": "Welcome to Future University",
-    "subtitle": "Nurturing Excellence, Creating Tomorrow",
-    "explore": "Explore More",
-    "apply": "Apply Now"
+  "academicUnits": {
+    "engineering": "College of Engineering",
+    "management": "College of Management",
+    "humanities": "College of Humanities",
+    "general": "General Education Center"
   },
-  "news": {
-    "title": "Latest News",
-    "more": "View More",
-    "spotlight": "Spotlight",
-    "announcements": "Announcements",
-    "events": "Events"
+  "adminUnits": {
+    "academicAffairs": "Academic Affairs",
+    "studentAffairs": "Student Affairs",
+    "generalAffairs": "General Affairs",
+    "research": "Research & Development",
+    "library": "Library",
+    "itCenter": "IT Center"
+  },
+  "hero": {
+    "welcome": "Welcome to CUST",
+    "subtitle": "Nurturing Professionals, Creating the Future",
+    "apply": "Apply Now",
+    "explore": "Explore CUST",
+    "slide2Title": "2026 Admissions Open",
+    "slide2Subtitle": "Join CUST, Unlock Your Potential",
+    "slide3Title": "International Learning",
+    "slide3Subtitle": "Connect with the World, Expand Your Horizons"
   },
   "quickLinks": {
     "title": "Quick Links",
     "studentPortal": "Student Portal",
     "facultyPortal": "Faculty Portal",
     "library": "Library",
-    "calendar": "Academic Calendar",
-    "courses": "Course Catalog",
-    "email": "Campus Email"
-  },
-  "campus": {
-    "title": "Campus Life",
-    "learning": "Learning Resources",
-    "learningDesc": "Courses, open courseware, and various resources",
-    "living": "Living Information",
-    "livingDesc": "Housing, transportation, and daily life info",
-    "network": "Network Services",
-    "networkDesc": "Campus network and account services"
+    "courses": "Course System",
+    "email": "Campus Email",
+    "calendar": "Calendar"
   },
   "stats": {
     "students": "Students",
-    "faculty": "Faculty Members",
+    "faculty": "Faculty",
     "departments": "Departments",
     "years": "Years of History"
   },
-  "footer": {
+  "features": {
+    "title": "Why Choose CUST?",
+    "teaching": "Quality Teaching",
+    "teachingDesc": "Industry experts, practical education",
+    "industry": "Industry Partnership",
+    "industryDesc": "Close collaboration with enterprises",
+    "international": "International Exchange",
+    "internationalDesc": "Partner schools worldwide",
+    "career": "Career Support",
+    "careerDesc": "High employment rate, extensive alumni network"
+  },
+  "news": {
+    "title": "Latest News",
+    "more": "View More",
+    "readMore": "Read More",
+    "categories": {
+      "all": "All",
+      "admission": "Admissions",
+      "honor": "Honors",
+      "activity": "Activities",
+      "international": "International",
+      "announcement": "Announcements"
+    }
+  },
+  "about": {
+    "title": "About CUST",
+    "subtitle": "Discover our history, vision and mission",
+    "intro": "Introduction",
+    "introText1": "China University of Science and Technology was founded in 1968, originally as China Institute of Technology. After decades of development, it has become a university with excellent traditions.",
+    "introText2": "With our motto 'Sincerity, Prudence, Diligence, Simplicity', we are committed to cultivating outstanding talents with professional knowledge and skills.",
+    "visionTitle": "Vision & Mission",
+    "vision": "Vision",
+    "visionText": "To become the most influential applied science university in Asia-Pacific",
+    "mission": "Mission",
+    "missionText": "To cultivate outstanding talents with professional skills and innovative thinking",
+    "values": "Values",
+    "valuesText": "Integrity, Prudence, Diligence, Simplicity"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Feel free to reach out with any questions",
+    "info": "Contact Information",
     "address": "Address",
+    "addressText": "No. 245, Sec. 3, Academia Rd., Nangang Dist., Taipei 115311",
     "phone": "Phone",
     "email": "Email",
-    "followUs": "Follow Us",
+    "hours": "Office Hours",
+    "hoursText": "Monday - Friday 08:00 - 17:00",
+    "form": "Contact Form",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message",
+    "location": "Location"
+  },
+  "footer": {
     "quickLinks": "Quick Links",
     "resources": "Resources",
+    "followUs": "Follow Us",
+    "followText": "Subscribe to our social media for the latest news!",
     "copyright": "All Rights Reserved"
   },
   "common": {
-    "learnMore": "Learn More",
-    "readMore": "Read More",
-    "viewAll": "View All"
+    "viewMore": "View More",
+    "learnMore": "Learn More"
   }
 }

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 import LanguageSwitcher from './LanguageSwitcher.vue'
@@ -20,22 +20,22 @@ onUnmounted(() => {
 })
 
 // 學術單位下拉選單
-const academicUnits = [
-  { name: '工學院', path: '/academic/engineering' },
-  { name: '管理學院', path: '/academic/management' },
-  { name: '人文社會學院', path: '/academic/humanities' },
-  { name: '通識教育中心', path: '/academic/general' }
-]
+const academicUnits = computed(() => [
+  { name: t('academicUnits.engineering'), path: '/academic/engineering' },
+  { name: t('academicUnits.management'), path: '/academic/management' },
+  { name: t('academicUnits.humanities'), path: '/academic/humanities' },
+  { name: t('academicUnits.general'), path: '/academic/general' }
+])
 
 // 行政單位下拉選單
-const adminUnits = [
-  { name: '教務處', path: '/admin/academic-affairs' },
-  { name: '學務處', path: '/admin/student-affairs' },
-  { name: '總務處', path: '/admin/general-affairs' },
-  { name: '研發處', path: '/admin/research' },
-  { name: '圖書館', path: '/admin/library' },
-  { name: '資訊中心', path: '/admin/it-center' }
-]
+const adminUnits = computed(() => [
+  { name: t('adminUnits.academicAffairs'), path: '/admin/academic-affairs' },
+  { name: t('adminUnits.studentAffairs'), path: '/admin/student-affairs' },
+  { name: t('adminUnits.generalAffairs'), path: '/admin/general-affairs' },
+  { name: t('adminUnits.research'), path: '/admin/research' },
+  { name: t('adminUnits.library'), path: '/admin/library' },
+  { name: t('adminUnits.itCenter'), path: '/admin/it-center' }
+])
 </script>
 
 <template>
@@ -59,17 +59,17 @@ const adminUnits = [
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link">首頁</RouterLink>
+            <RouterLink to="/" class="nav-link">{{ t('nav.home') }}</RouterLink>
           </li>
           
           <li class="nav-item">
-            <RouterLink to="/about" class="nav-link">關於中華</RouterLink>
+            <RouterLink to="/about" class="nav-link">{{ t('nav.about') }}</RouterLink>
           </li>
           
           <!-- 學術單位 Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              學術單位
+              {{ t('nav.academic') }}
             </a>
             <ul class="dropdown-menu">
               <li v-for="unit in academicUnits" :key="unit.path">
@@ -81,7 +81,7 @@ const adminUnits = [
           <!-- 行政單位 Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              行政單位
+              {{ t('nav.admin') }}
             </a>
             <ul class="dropdown-menu">
               <li v-for="unit in adminUnits" :key="unit.path">
@@ -91,15 +91,15 @@ const adminUnits = [
           </li>
           
           <li class="nav-item">
-            <RouterLink to="/admissions" class="nav-link">招生資訊</RouterLink>
+            <RouterLink to="/admissions" class="nav-link">{{ t('nav.admissions') }}</RouterLink>
           </li>
           
           <li class="nav-item">
-            <RouterLink to="/news" class="nav-link">最新消息</RouterLink>
+            <RouterLink to="/news" class="nav-link">{{ t('nav.news') }}</RouterLink>
           </li>
           
           <li class="nav-item">
-            <RouterLink to="/contact" class="nav-link">聯絡我們</RouterLink>
+            <RouterLink to="/contact" class="nav-link">{{ t('nav.contact') }}</RouterLink>
           </li>
           
           <li class="nav-item ms-2">
