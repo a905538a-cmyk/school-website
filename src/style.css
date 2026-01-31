@@ -1,27 +1,30 @@
 /* ========================================
    中華科技大學 - Bootstrap 5 Custom Styles
+   明亮活潑版
    ======================================== */
 
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
 
-/* CSS Variables */
+/* CSS Variables - 明亮活潑配色 */
 :root {
-  --cust-primary: #003d79;
-  --cust-secondary: #0066cc;
-  --cust-accent: #ffd700;
-  --cust-dark: #1a1a2e;
+  --cust-primary: #2ecc71;      /* 活潑綠 */
+  --cust-secondary: #3498db;    /* 明亮藍 */
+  --cust-accent: #f39c12;       /* 活力橘 */
+  --cust-purple: #9b59b6;       /* 紫色 */
+  --cust-pink: #e91e63;         /* 粉紅 */
+  --cust-teal: #00bcd4;         /* 青色 */
+  --cust-dark: #2c3e50;
   --cust-light: #f8f9fa;
-  --cust-gradient: linear-gradient(135deg, #003d79 0%, #0066cc 100%);
+  --cust-gradient: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
+  --cust-gradient-warm: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+  --cust-gradient-cool: linear-gradient(135deg, #00bcd4 0%, #9b59b6 100%);
 }
 
-/* Base Styles */
 body {
-  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
 }
 
-/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
@@ -73,7 +76,7 @@ html {
   letter-spacing: 1px;
 }
 
-/* Nav Links with Hover Effects */
+/* Nav Links */
 .nav-link {
   position: relative;
   padding: 0.5rem 1rem !important;
@@ -92,6 +95,7 @@ html {
   background: var(--cust-primary);
   transition: all 0.3s ease;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .nav-link:hover {
@@ -102,40 +106,8 @@ html {
   width: 80%;
 }
 
-/* Dropdown with Animation */
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  padding: 0.5rem;
-  animation: fadeInDown 0.3s ease;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.dropdown-item {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.dropdown-item:hover {
-  background: var(--cust-primary);
-  color: white;
-  transform: translateX(5px);
-}
-
 /* ========================================
-   Hero Section
+   Hero Section - 明亮版
    ======================================== */
 .hero-section {
   position: relative;
@@ -154,7 +126,12 @@ html {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 61, 121, 0.85) 0%, rgba(0, 102, 204, 0.7) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(46, 204, 113, 0.75) 0%,
+    rgba(52, 152, 219, 0.65) 50%,
+    rgba(155, 89, 182, 0.55) 100%
+  );
 }
 
 .hero-content {
@@ -173,19 +150,13 @@ html {
 
 .hero-subtitle {
   font-size: 1.5rem;
-  opacity: 0.9;
+  opacity: 0.95;
   animation: fadeInUp 1s ease 0.2s both;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero Buttons */
@@ -195,32 +166,31 @@ html {
   font-weight: 600;
   border-radius: 50px;
   transition: all 0.3s ease;
-  text-transform: none;
 }
 
 .hero-btn-primary {
   background: var(--cust-accent);
-  color: var(--cust-dark);
+  color: white;
   border: none;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(243, 156, 18, 0.4);
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
-  background: #ffed4a;
+  box-shadow: 0 8px 30px rgba(243, 156, 18, 0.5);
+  background: #e67e22;
+  color: white;
 }
 
 .hero-btn-outline {
   background: transparent;
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .hero-btn-outline:hover {
   background: white;
   color: var(--cust-primary);
-  transform: translateY(-3px);
 }
 
 /* Scroll Indicator */
@@ -237,25 +207,22 @@ html {
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
   40% { transform: translateX(-50%) translateY(-10px); }
-  60% { transform: translateX(-50%) translateY(-5px); }
 }
 
 /* ========================================
-   Interactive Cards (Mouse Follow Effect)
+   Interactive Cards - 活潑色彩
    ======================================== */
 .interactive-card {
   background: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-style: preserve-3d;
-  perspective: 1000px;
 }
 
 .interactive-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .interactive-card .card-icon {
@@ -276,18 +243,64 @@ html {
   transform: scale(1.1) rotateY(10deg);
 }
 
-/* 3D Tilt Effect Card */
-.tilt-card {
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease;
+/* ========================================
+   Unit Cards - 學術/行政單位卡片
+   ======================================== */
+.unit-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
 }
 
-.tilt-card:hover {
-  transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+.unit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.unit-card-header {
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.unit-card-header.green { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.unit-card-header.blue { background: linear-gradient(135deg, #3498db, #2980b9); }
+.unit-card-header.orange { background: linear-gradient(135deg, #f39c12, #e67e22); }
+.unit-card-header.purple { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.unit-card-header.teal { background: linear-gradient(135deg, #1abc9c, #16a085); }
+.unit-card-header.pink { background: linear-gradient(135deg, #e91e63, #c2185b); }
+.unit-card-header.red { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.unit-card-header.indigo { background: linear-gradient(135deg, #3f51b5, #303f9f); }
+
+.unit-card-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.unit-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.unit-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.unit-card-desc {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 /* ========================================
-   Stats Section
+   Stats Section - 多彩版
    ======================================== */
 .stats-section {
   background: var(--cust-gradient);
@@ -299,7 +312,7 @@ html {
   content: '';
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .stat-item {
@@ -322,7 +335,58 @@ html {
 }
 
 /* ========================================
-   News Section
+   Quick Links - 多彩圖示
+   ======================================== */
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quick-link:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.quick-link-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.quick-link-icon.green { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+.quick-link-icon.blue { background: rgba(52, 152, 219, 0.15); color: #3498db; }
+.quick-link-icon.orange { background: rgba(243, 156, 18, 0.15); color: #f39c12; }
+.quick-link-icon.purple { background: rgba(155, 89, 182, 0.15); color: #9b59b6; }
+.quick-link-icon.teal { background: rgba(26, 188, 156, 0.15); color: #1abc9c; }
+.quick-link-icon.pink { background: rgba(233, 30, 99, 0.15); color: #e91e63; }
+
+.quick-link:hover .quick-link-icon {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.quick-link:hover .quick-link-icon.green { background: #2ecc71; color: white; }
+.quick-link:hover .quick-link-icon.blue { background: #3498db; color: white; }
+.quick-link:hover .quick-link-icon.orange { background: #f39c12; color: white; }
+.quick-link:hover .quick-link-icon.purple { background: #9b59b6; color: white; }
+.quick-link:hover .quick-link-icon.teal { background: #1abc9c; color: white; }
+.quick-link:hover .quick-link-icon.pink { background: #e91e63; color: white; }
+
+/* ========================================
+   News Cards
    ======================================== */
 .news-card {
   border: none;
@@ -364,44 +428,31 @@ html {
 }
 
 /* ========================================
-   Quick Links Grid
+   Page Headers - 明亮版
    ======================================== */
-.quick-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
-  background: white;
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.quick-link:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  color: var(--cust-primary);
-}
-
-.quick-link-icon {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 20px;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.quick-link:hover .quick-link-icon {
+.page-header {
   background: var(--cust-gradient);
+  padding: 8rem 0 4rem;
   color: white;
-  transform: rotateY(180deg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.15' d='M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,154.7C672,160,768,192,864,186.7C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
 }
 
 /* ========================================
@@ -449,60 +500,18 @@ html {
 
 .social-link:hover {
   background: var(--cust-accent);
-  color: var(--cust-dark) !important;
+  color: white !important;
   transform: translateY(-3px);
 }
 
 /* ========================================
-   Animations & Effects
+   Mouse Effects
    ======================================== */
-
-/* Parallax Scroll Effect */
-.parallax-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Fade In on Scroll */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-in-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Floating Animation */
-.floating {
-  animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Pulse Effect */
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* Mouse Cursor Effect */
 .cursor-glow {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(0, 61, 121, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46, 204, 113, 0.3) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -516,60 +525,39 @@ html {
 }
 
 /* ========================================
-   Page Headers
+   Buttons
    ======================================== */
-.page-header {
-  background: var(--cust-gradient);
-  padding: 8rem 0 4rem;
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.btn-primary {
+  background: var(--cust-primary) !important;
+  border-color: var(--cust-primary) !important;
 }
 
-.page-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,154.7C672,160,768,192,864,186.7C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+.btn-primary:hover {
+  background: #27ae60 !important;
+  border-color: #27ae60 !important;
 }
 
-.page-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  position: relative;
+.btn-outline-primary {
+  color: var(--cust-primary) !important;
+  border-color: var(--cust-primary) !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--cust-primary) !important;
+  color: white !important;
 }
 
 /* ========================================
-   Responsive Adjustments
+   Responsive
    ======================================== */
 @media (max-width: 992px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-  }
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .stat-number { font-size: 2.5rem; }
 }
 
 @media (max-width: 576px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .school-name-zh {
-    font-size: 1.2rem;
-  }
-  
-  .school-name-en {
-    display: none;
-  }
+  .hero-title { font-size: 2rem; }
+  .school-name-zh { font-size: 1.2rem; }
+  .school-name-en { display: none; }
 }

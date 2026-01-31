@@ -18,24 +18,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
-
-// 學術單位下拉選單
-const academicUnits = computed(() => [
-  { name: t('academicUnits.engineering'), path: '/academic/engineering' },
-  { name: t('academicUnits.management'), path: '/academic/management' },
-  { name: t('academicUnits.humanities'), path: '/academic/humanities' },
-  { name: t('academicUnits.general'), path: '/academic/general' }
-])
-
-// 行政單位下拉選單
-const adminUnits = computed(() => [
-  { name: t('adminUnits.academicAffairs'), path: '/admin/academic-affairs' },
-  { name: t('adminUnits.studentAffairs'), path: '/admin/student-affairs' },
-  { name: t('adminUnits.generalAffairs'), path: '/admin/general-affairs' },
-  { name: t('adminUnits.research'), path: '/admin/research' },
-  { name: t('adminUnits.library'), path: '/admin/library' },
-  { name: t('adminUnits.itCenter'), path: '/admin/it-center' }
-])
 </script>
 
 <template>
@@ -55,7 +37,7 @@ const adminUnits = computed(() => [
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Nav Items -->
+      <!-- Nav Items - 無下拉選單 -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item">
@@ -66,28 +48,14 @@ const adminUnits = computed(() => [
             <RouterLink to="/about" class="nav-link">{{ t('nav.about') }}</RouterLink>
           </li>
           
-          <!-- 學術單位 Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              {{ t('nav.academic') }}
-            </a>
-            <ul class="dropdown-menu">
-              <li v-for="unit in academicUnits" :key="unit.path">
-                <RouterLink :to="unit.path" class="dropdown-item">{{ unit.name }}</RouterLink>
-              </li>
-            </ul>
+          <!-- 學術單位 - 直接連結 -->
+          <li class="nav-item">
+            <RouterLink to="/academic" class="nav-link">{{ t('nav.academic') }}</RouterLink>
           </li>
           
-          <!-- 行政單位 Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              {{ t('nav.admin') }}
-            </a>
-            <ul class="dropdown-menu">
-              <li v-for="unit in adminUnits" :key="unit.path">
-                <RouterLink :to="unit.path" class="dropdown-item">{{ unit.name }}</RouterLink>
-              </li>
-            </ul>
+          <!-- 行政單位 - 直接連結 -->
+          <li class="nav-item">
+            <RouterLink to="/admin" class="nav-link">{{ t('nav.admin') }}</RouterLink>
           </li>
           
           <li class="nav-item">

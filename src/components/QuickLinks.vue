@@ -4,12 +4,12 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const quickLinks = [
-  { key: 'studentPortal', icon: '👨‍🎓', path: '#' },
-  { key: 'facultyPortal', icon: '👨‍🏫', path: '#' },
-  { key: 'library', icon: '📚', path: '#' },
-  { key: 'courses', icon: '📝', path: '#' },
-  { key: 'email', icon: '📧', path: '#' },
-  { key: 'calendar', icon: '📅', path: '#' }
+  { key: 'studentPortal', icon: '👨‍🎓', path: '#', color: 'green' },
+  { key: 'facultyPortal', icon: '👨‍🏫', path: '#', color: 'blue' },
+  { key: 'library', icon: '📚', path: '#', color: 'purple' },
+  { key: 'courses', icon: '📝', path: '#', color: 'orange' },
+  { key: 'email', icon: '📧', path: '#', color: 'teal' },
+  { key: 'calendar', icon: '📅', path: '#', color: 'pink' }
 ]
 
 const handleMouseMove = (e, el) => {
@@ -40,7 +40,7 @@ const handleMouseLeave = (el) => {
             @mousemove="(e) => handleMouseMove(e, $event.currentTarget)"
             @mouseleave="handleMouseLeave($event.currentTarget)"
           >
-            <div class="quick-link-icon">{{ link.icon }}</div>
+            <div class="quick-link-icon" :class="link.color">{{ link.icon }}</div>
             <span class="fw-medium text-dark">{{ t(`quickLinks.${link.key}`) }}</span>
           </a>
         </div>

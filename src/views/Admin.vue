@@ -1,13 +1,19 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+import { RouterLink } from 'vue-router'
+
+const { t } = useI18n()
+
+// 行政單位 - 卡片式排列
 const adminUnits = [
-  { name: '教務處', icon: '📖', desc: '負責課程規劃、學籍管理、成績管理等事務' },
-  { name: '學務處', icon: '👥', desc: '負責學生輔導、社團活動、生活事務等' },
-  { name: '總務處', icon: '🏛️', desc: '負責校園設施維護、採購、財務等事務' },
-  { name: '研發處', icon: '🔬', desc: '負責研究計畫、產學合作、學術交流等' },
-  { name: '圖書館', icon: '📚', desc: '提供圖書資源、數位學習、閱讀空間等服務' },
-  { name: '資訊中心', icon: '💻', desc: '負責校園網路、資訊系統、技術支援等' },
-  { name: '國際處', icon: '🌍', desc: '負責國際交流、外籍生服務、姊妹校合作等' },
-  { name: '進修部', icon: '🌙', desc: '負責進修學制、推廣教育等事務' }
+  { key: 'academicAffairs', icon: '📖', color: 'blue', desc: '課程規劃、學籍、成績管理' },
+  { key: 'studentAffairs', icon: '👥', color: 'green', desc: '學生輔導、社團、生活事務' },
+  { key: 'generalAffairs', icon: '🏛️', color: 'orange', desc: '設施維護、採購、財務管理' },
+  { key: 'research', icon: '🔬', color: 'purple', desc: '研究計畫、產學合作、學術交流' },
+  { key: 'library', icon: '📚', color: 'teal', desc: '圖書資源、數位學習、閱讀空間' },
+  { key: 'itCenter', icon: '💻', color: 'pink', desc: '校園網路、資訊系統、技術支援' },
+  { key: 'international', icon: '🌍', color: 'indigo', desc: '國際交流、外籍生服務、姊妹校' },
+  { key: 'extension', icon: '🌙', color: 'red', desc: '進修學制、推廣教育、終身學習' }
 ]
 </script>
 
@@ -15,7 +21,7 @@ const adminUnits = [
   <div class="admin-page">
     <div class="page-header">
       <div class="container position-relative">
-        <h1>行政單位</h1>
+        <h1>{{ t('nav.admin') }}</h1>
         <p class="mb-0">服務全校師生的行政團隊</p>
       </div>
     </div>
@@ -23,12 +29,16 @@ const adminUnits = [
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
-          <div v-for="unit in adminUnits" :key="unit.name" class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-sm h-100 text-center p-4 interactive-card">
-              <div class="display-3 mb-3">{{ unit.icon }}</div>
-              <h5 class="fw-bold">{{ unit.name }}</h5>
-              <p class="text-muted small mb-0">{{ unit.desc }}</p>
-            </div>
+          <div v-for="unit in adminUnits" :key="unit.key" class="col-md-6 col-lg-3">
+            <a href="#" class="unit-card">
+              <div class="unit-card-header" :class="unit.color">
+                <div class="unit-card-icon">{{ unit.icon }}</div>
+              </div>
+              <div class="unit-card-body">
+                <h5 class="unit-card-title">{{ t(`adminUnits.${unit.key}`) || unit.key }}</h5>
+                <p class="unit-card-desc">{{ unit.desc }}</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

@@ -20,7 +20,9 @@
     "generalAffairs": "總務處",
     "research": "研發處",
     "library": "圖書館",
-    "itCenter": "資訊中心"
+    "itCenter": "資訊中心",
+    "international": "國際處",
+    "extension": "進修部"
   },
   "hero": {
     "welcome": "歡迎來到中華科技大學",

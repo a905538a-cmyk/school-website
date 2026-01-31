@@ -20,7 +20,9 @@
     "generalAffairs": "General Affairs",
     "research": "Research & Development",
     "library": "Library",
-    "itCenter": "IT Center"
+    "itCenter": "IT Center",
+    "international": "International Affairs",
+    "extension": "Extension Education"
   },
   "hero": {
     "welcome": "Welcome to CUST",

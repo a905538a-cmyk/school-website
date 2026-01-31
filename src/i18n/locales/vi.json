@@ -20,7 +20,9 @@
     "generalAffairs": "Phòng Hành chính",
     "research": "Phòng Nghiên cứu",
     "library": "Thư viện",
-    "itCenter": "Trung tâm CNTT"
+    "itCenter": "Trung tâm CNTT",
+    "international": "Phòng Quốc tế",
+    "extension": "Giáo dục mở rộng"
   },
   "hero": {
     "welcome": "Chào mừng đến CUST",
